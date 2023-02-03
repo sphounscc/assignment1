@@ -21,12 +21,12 @@ export class ContentList {
 
     printIndex(index: number): string {
         let readerFriendlyHtml = `<div>`;
-        readerFriendlyHtml += `<p>` + this._items[index].title + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].description + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].type + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].creator + `<p>`;
-        readerFriendlyHtml += `<img src ="` + this._items[index].imgURL + `">`;
-        readerFriendlyHtml += `</div>`;
-        return readerFriendlyHtml;
+            readerFriendlyHtml += `<p>` + this._items[index].title + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].description + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].type + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].creator + `<p>`;
+            readerFriendlyHtml += `<img src ="` + this._items[index].imgURL + `">`;
+            readerFriendlyHtml += `</div>`;
+            return readerFriendlyHtml;
     }
 }

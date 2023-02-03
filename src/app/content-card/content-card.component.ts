@@ -42,7 +42,13 @@ export class ContentCardComponent {
     this.myContentList.addFunction(this.contentItem4);
   }
 
-  displayMyIndex(index : number): string {
-    return this.myContentList.printIndex(index);
+  displayMyIndex(index : number) {
+    let myItems = this.myContentList.getItems();
+
+    if (myItems.length > 0 && index > 0 && index < myItems.length){
+      return this.myContentList.printIndex(index);
+    } else {
+      alert("NO THAT IS BAD");
+    }
   }
 }
