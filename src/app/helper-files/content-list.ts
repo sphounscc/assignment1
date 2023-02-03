@@ -1,6 +1,6 @@
 import { Content } from "./content-interface";
 
-class ContentList {
+export class ContentList {
     private _items: Content [];
 
     constructor() {
@@ -19,7 +19,7 @@ class ContentList {
         return this._items.length;
     }
 
-    printIndex(index: number) {
+    printIndex(index: number): string {
         let readerFriendlyHtml = `<div>`;
         readerFriendlyHtml += `<p>` + this._items[index].title + `<p>`;
         readerFriendlyHtml += `<p>` + this._items[index].description + `<p>`;
