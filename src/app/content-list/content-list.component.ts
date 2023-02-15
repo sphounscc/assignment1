@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { FilterContentPipe } from '../filter-content.pipe';
 
 @Component({
   selector: 'app-content-list',
@@ -9,6 +10,7 @@ import { Content } from '../helper-files/content-interface';
 
 export class ContentListComponent {
 
+  @Input() searchText: any;
   contentItem1 : Content = {
     id: 0,
     title: 'mySampleTitle',
@@ -57,4 +59,17 @@ export class ContentListComponent {
   }
 
   myContentArray : Content[] = [this.contentItem1, this.contentItem2, this.contentItem3, this.contentItem4, this.contentItem5, this.contentItem6, this.contentItem7];
+
+  search(searchText: string){
+    console.log(searchText);
+    this.myContentArray.forEach((contentItem) => {
+      if(contentItem.title === searchText) {
+        console.log('Item was found');
+        return 'Item was found';
+      } else {
+        console.log('Item was not found');
+        return 'Item was not found';
+      }
+    })
+  }
 }

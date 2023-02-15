@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { FilterContentPipe } from '../filter-content.pipe';
 
 @Component({
   selector: 'app-content-card',

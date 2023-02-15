@@ -1,3 +1,9 @@
 <!-- <p>content-list works!</p> -->
+<input [(ngModel)]="searchText">
+<button (click)="search(searchText)">Submit</button>
+<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item | filterContent:Exciting"></app-content-card> -->
+<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item | filterContent:Boring"></app-content-card> -->
+<app-content-card *ngFor="let item of myContentArray; index as i;" [content]="item"></app-content-card>
 
-<app-content-card *ngFor="let item of myContentArray; index as i" [content]="item"></app-content-card>
+<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item"></app-content-card> -->
+<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item"></app-content-card> -->
