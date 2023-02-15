@@ -11,4 +11,8 @@ export class ContentCardComponent {
 
   constructor(){
   }
+
+  logInfo(content: Content){
+    console.log('ID: ', content.id, ' TITLE: ', content.title);
+  }
 }

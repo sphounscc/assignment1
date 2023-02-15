@@ -13,7 +13,9 @@ export class ContentListComponent {
     id: 0,
     title: 'mySampleTitle',
     description: 'This is a description',
-    creator: 'Creator'
+    creator: 'Creator',
+    imgURL: 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png',
+    tags: ['New', 'Fun']
   }
   contentItem2 : Content = {
     id: 1,

@@ -1,7 +1,11 @@
 <div *ngIf="content.id < 5" class="myCard">
     <p>{{content.id}}</p>
-    <p>{{content.title}}</p>
+    <h1>{{content.title}}</h1>
     <p>{{content.description}}</p>
+    <p>{{content.creator}}</p>
+    <p>{{content.type}}</p>
+    <p>{{content.tags}}</p>
+    <img src="{{content.imgURL}}" (click)="logInfo(content)"/>
     <!-- <p>{{content.id}}</p>
     <p>{{content.id}}</p> -->
 </div>
