@@ -15,13 +15,15 @@ export class ContentListComponent {
     description: 'This is a description',
     creator: 'Creator',
     imgURL: 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png',
-    tags: ['New', 'Fun']
+    tags: ['New', 'Fun'],
+    type: 'Exciting'
   }
   contentItem2 : Content = {
     id: 1,
     title: 'mySampleTitle2',
     description: 'This is a description2',
-    creator: 'Creator2'
+    creator: 'Creator2',
+    type: 'Boring'
   }
   contentItem3 : Content = {
     id: 2,
@@ -47,6 +49,12 @@ export class ContentListComponent {
     description: 'This is a description6',
     creator: 'Creator'
   }
+  contentItem7 : Content = {
+    id: 6,
+    title: 'mySampleTitle7',
+    description: 'This is a description7',
+    creator: 'Creator'
+  }
 
-  myContentArray : Content[] = [this.contentItem1, this.contentItem2, this.contentItem3, this.contentItem4, this.contentItem5, this.contentItem6];
+  myContentArray : Content[] = [this.contentItem1, this.contentItem2, this.contentItem3, this.contentItem4, this.contentItem5, this.contentItem6, this.contentItem7];
 }
