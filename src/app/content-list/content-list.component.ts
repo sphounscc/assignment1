@@ -70,6 +70,6 @@ export class ContentListComponent {
         console.log('Item was not found');
         return 'Item was not found';
       }
-    })
+    });
   }
 }

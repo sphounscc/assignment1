@@ -1,9 +1,18 @@
 <!-- <p>content-list works!</p> -->
 <input [(ngModel)]="searchText">
 <button (click)="search(searchText)">Submit</button>
-<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item | filterContent:Exciting"></app-content-card> -->
-<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item | filterContent:Boring"></app-content-card> -->
-<app-content-card *ngFor="let item of myContentArray; index as i;" [content]="item"></app-content-card>
 
-<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item"></app-content-card> -->
-<!-- <app-content-card *ngFor="let item of myContentArray; index as i" [content]="item"></app-content-card> -->
+<h3>forLoop with type='Exciting' passed to pipe</h3>
+<div *ngFor="let item of (myContentArray | filterContent:'Exciting'); index as i">
+    <app-content-card  [content]="item"></app-content-card>
+</div>
+
+<h3>forLoop with type='Boring' passed to pipe</h3>
+<div *ngFor="let item of (myContentArray | filterContent:'Boring'); index as i">
+    <app-content-card  [content]="item"></app-content-card>
+</div>
+
+<h3>forLoop with no type passed to pipe</h3>
+<div *ngFor="let item of (myContentArray | filterContent); index as i">
+    <app-content-card  [content]="item"></app-content-card>
+</div>
